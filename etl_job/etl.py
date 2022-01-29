@@ -11,13 +11,15 @@ s  = SentimentIntensityAnalyzer()
 # Establish a connection to the MongoDB server
 client = pymongo.MongoClient(host="mongodb", port=27017)
 
-# Select the database you want to use withing the MongoDB server
+# Select the database to use within the MongoDB server
 db = client.twitter
 
 docs = db.twitter.find()
 
+# Establish a connection to the Postgres server
 pg = create_engine('postgresql://postgres:loop@postgresdb:5432/postgres', echo=True)
 
+# Query to create table
 pg.execute('''
     CREATE TABLE IF NOT EXISTS tweets (
     text TEXT,
@@ -25,9 +27,10 @@ pg.execute('''
     id SERIAL
 );
 ''')
+# Loop to insert every tweet from MongoDB to Postgresql
 while True:
     for doc in docs:
-        sentiment = s.polarity_scores(doc['text'])  # assuming your JSON docs have a text field
+        sentiment = s.polarity_scores(doc['text'])
         print(sentiment)
         text = doc['text']
         score = sentiment['compound']

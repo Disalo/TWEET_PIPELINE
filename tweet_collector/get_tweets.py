@@ -10,6 +10,7 @@ import pymongo
 
 # create a connection to the mongodb running in the mongo container of the pipeline
 mongo_client = pymongo.MongoClient("mongodb")
+
 #create a new database called twitter
 db = mongo_client.twitter
 
@@ -25,7 +26,6 @@ if twitter_client:
 else:
     logging.critical('\nVerify your credentials')
 
-#### SEARCHING FOR TWEETS #####
 
 # Defining a query search string
 query = 'climate change lang:en -is:retweet'  
@@ -37,10 +37,9 @@ while True:
         logging.critical(f'\n\n\nINCOMING TWEET:\n{tweet.text}\n\n\n')
 
         
-#         # create a json record and inserting it in the collections called tweets 
+#         # create a json record and inserting it in the collection 
         record = {'text': tweet.text, 'id': tweet.id, 'created_at': tweet.created_at}
 
-#         # and inserting it in the collections called tweets 
         db.twitter.insert_one(record)
 
         time.sleep(10.0)
