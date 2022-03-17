@@ -1,10 +1,8 @@
 # Twitter_Data-Pipeline
 
 ## Project Aim:
-
-    To build a Dockerized pipeline with ETL job.
-
-    Keywords : Docker, Mongo, PostgreSQL, Slackbot
+To build a Dockerized pipeline with ETL job.
+Keywords : Docker, Mongo, PostgreSQL, Slackbot
 
 ## This pipeline project involves three Docker containers:
    Listens to tweets about a given keyword. User can set a maximum limit or stream continuously, depending on the keyword.
