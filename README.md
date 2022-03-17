@@ -6,7 +6,7 @@
 
     Keywords : Docker, Mongo, PostgreSQL, Slackbot
 
-## This pipeline project involves three Docker containers and a Metabase dashboard container that, in short, does:
+## This pipeline project involves three Docker containers:
    Listens to tweets about a given keyword. User can set a maximum limit or stream continuously, depending on the keyword.
    Listened tweets are stored in a MongoDB.
    An ETL job that takes Tweets and collects metadata into a Postgres DB.
