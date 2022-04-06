@@ -13,10 +13,7 @@ To build a Dockerized pipeline with ETL job.
    - slack_bot container: Finally, a Slackbot template is provided to post Slack messages to a specific channel. The data is read from postgres database, based on last tweet stored on.
 
 ## Run
-Simply open a terminal on the folder(where docker-compose.yml file is), and give 'docker-compose up' command. It will automatically pull and download images and create required images as defined in .yml fils.
-
-Each container could be accessed through 'cli' in docker app.
-
-For interacteion with mongo 'docker exec -it container_id mongo' could be given.
-   
+Simply open a terminal on the folder(where docker-compose.yml file is), and give 'docker-compose up' command. It will automatically pull and download images and create required images as defined in .yml fils. <br />
+Each container could be accessed through 'cli' in docker app. <br />
+For interacteion with mongo 'docker exec -it container_id mongo' could be given. <br />
 For interacteion with postgres 'docker exec -it container_id psql -p 5432 -U postgres' could be given.
