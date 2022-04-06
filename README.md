@@ -2,7 +2,7 @@
 
 ## Project Aim:
 To orchestrate a data pipeline with five containers: 1.tweet_collector, 2.mongodb, 3.etl_job, 4.postgresdb, 5.slack_bot
-To build a Dockerized pipeline with ETL job.
+<To build a Dockerized pipeline with ETL job.
 
 ## This pipeline project involves five Docker containers:
    - tweet_collector container: Listens to tweets about a given keyword(here is 'climate change', but it could be changed within 'get_tweets.py').
