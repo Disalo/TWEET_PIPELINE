@@ -14,6 +14,9 @@ To build a Dockerized pipeline with ETL job.
 
 ## Run
 Simply open a terminal on the folder(where docker-compose.yml file is), and give 'docker-compose up' command. It will automatically pull and download images and create required images as defined in .yml fils.
+
 Each container could be accessed through 'cli' in docker app.
+
 For interacteion with mongo 'docker exec -it <container id> mongo' could be given.
+   
 For interacteion with postgres 'docker exec -it <container id> psql -p 5432 -U postgres' could be given.
