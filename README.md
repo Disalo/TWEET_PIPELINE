@@ -17,6 +17,6 @@ Simply open a terminal on the folder(where docker-compose.yml file is), and give
 
 Each container could be accessed through 'cli' in docker app.
 
-For interacteion with mongo 'docker exec -it <container id> mongo' could be given.
+For interacteion with mongo 'docker exec -it container_id mongo' could be given.
    
-For interacteion with postgres 'docker exec -it <container id> psql -p 5432 -U postgres' could be given.
+For interacteion with postgres 'docker exec -it container_id psql -p 5432 -U postgres' could be given.
